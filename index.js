@@ -11,7 +11,10 @@ client = axios.create({
         });
 
 
+
+
 async function search(type, query) {
+
 
     if (type === 'movie') {
         try {
@@ -45,13 +48,16 @@ async function search(type, query) {
         
     }
 
+
     try {
         var promise = (await client.get(link)).data;
     }catch (error) {
         console.log(error);
     }    
 
+
     let parsed = parser.parse(promise).querySelector('.Grid--MycimaPosts').querySelectorAll('.GridItem');
+
 
         return parsed.map( (movie) => {
             if (movie) {
