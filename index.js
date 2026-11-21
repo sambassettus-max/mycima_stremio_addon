@@ -1,6 +1,6 @@
 const axios = require('axios');
 const parser = require('fast-html-parser');
-const Host = 'https://mycimaa.fun';
+const Host = 'https://mycima.fun';
 
 
 client = axios.create({
